@@ -1,0 +1,11 @@
+node_modules
+.expo
+.DS_Store
+yarn-error.log
+keys.js
+src/keys.js
+.ccls-cache/
+xcshareddata/
+xcuserdata/
+Pods/
+coverage/
