@@ -1,21 +1,34 @@
 # KeepFit
 
-This is the repository for Team 12 (CSCI 310 Dream Team) in USC's CSCI 310 during Spring 2021. It contains the application KeepFit.
+This is the repository for KeepFit, a fitness application built in React Native. KeepFit provides numerous amazing features, including the list below:
+1. User account management and authentication with Googla OAuth 2.0.
+2. The ability to explore exercise options, create a workout plan, and learn about the plan.
+3. Video uploading and sharing in a similar style to Youtube. These workout videos can be tagged based on the types of workouts they contain.
+4. Users can start livestreams of their workouts which other users on the app can join.
+5. The app has a social aspect, allowing users to follow each other, share workouts, track progress and more.
+6. KeepFit has a workout tracking feature similar to apps like Nike Run Club, which allows users to time their workout, record calories burned, what workouts they performed, and more.
+7. Users can schedule future workouts and receive reminders when its time to do them.
+8. All content such as videos, livestreams, and workouts can be saved/liked and referenced later by users.
 
-## Short Description
+For a complete list of KeepFit's features, you can view the multiple pdf files in the base of this repository. The REDLINE_DESIGN_DOCUMENT.pdf is particularly useful for learning about the application.
+
+## Background
 
 KeepFit is an application intended to help users remain in shape during the COVID-19 pandemic. While everyone has been stuck inside due to social distancing, access to the tools needed to stay in shape has been limited. This application solves that problems and allows users to "keep fit" from anywhere.
 
-## Team Members
+This application was created as part of a project in my CSCI 310: Software Engineering Class. It involves experience with a large number of useful, real-world technologies including React Native, Firebase Authentication, Firebase Firestore, Styled components, React navigation, Redux state management, Jest, Enzyme, React Native Testing Library, and various other smaller React Native libraries.
 
-1. Sajan Gutta
-2. Victor Udobong
-3. Max Friedman
-4. Aaron Ly
-5. Devin Mui
-6. Roddur Dasgupta
-
-# Instructions for Tests in Assignment 4
+Full Disclosure: This was a group project. However, I completed many of the critical features including the following:
+1. Initializing the application and setting up React Navigation infrastructure.
+2. Setting up all Firebase features and infrastructure (this was the most intensive part of completing the application).
+3. Implementing Video uploading, searching, and liking features.
+4. Implementing all user authentication and account management features.
+5. Connecting the application with Redux.
+6. Following/Unfollowing users.
+7. Tagging exercises, also searching for them.
+8. Exercise tracking/timing feature.
+9. Testing infrastructure.
+10. Regularly reviewed other group member's code and fixed and/or approved PR's.
 
 ## Running All Tests
 
@@ -23,17 +36,6 @@ KeepFit is an application intended to help users remain in shape during the COVI
 2. Make sure you have installed all node_modules.
 3. Run npm test.
 4. Test case execution will output to the terminal/command line.
-
-# Deployment/Demo Instructions for Assignment 3
-
-## Some Notes/Prerequisite Information
-
--   We are developing this application in React Native. This allows it to run on android and iOS ideally.
--   For this demo, due to quick turnaround times, the application is intended to be run using Expo and the Expo client.
--   Since all members of the team have iPhones, the app has been built and tested on iOS. We are uncertain if android has any particular errors.
--   If none of the TA's grading us have iPhones, they can also use an iOS simulator on their computer. This will entail downloading Xcode and using expo to start an iOS simulator. We are happy to help with any issues that arise related to this to make sure KeepFit can be properly demonstrated.
--   Our Deployment Doc can be found in this same directory as a pdf.
--   We have provided our redlined Design Document with changes as a pdf in this directory as well. It is in a specific
 
 # Running KeepFit
 
@@ -51,25 +53,3 @@ KeepFit is an application intended to help users remain in shape during the COVI
 -   Make sure your mobile device and computer are on the same Wifi network.
 -   Once there, run "expo start" and expo should start the application. The Expo Developer Console will open up with your application in a browser. Scan the QR code shown on that page from your mobile device. You will now be able to navigate to the Expo Go application and run KeepFit!
 -   NOTE: In the future, this process will no longer be necessary. We intend to eventually (in future sprints) make an optimized build of KeepFit for iOS and/or Android.
-
-# Using Zoom for Livestream API
-
--   We use the Zoom API to create livestreams on KeepFit. Zoom has extensive security in place to prevent unauthorized people from using the API.
--   As a result, it requires us to login to `expo` from the command line and also be logged into the proper Zoom account on our mobile device when working in development mode.
--   This makes the API difficult to check without providing you with our Zoom (and also Google account) credentials. We'd also have to share our expo account. For security purposes, we hope to demonstrate this feature when we provide you with a live demo of KeepFit for this assignment!
--   All other features will work easily when using the steps above though!
--   To set up your own local testing environment, follow these steps:
-
-    -   Visit the [Zoom API](https://marketplace.zoom.us/docs/api-reference/zoom-api).
-    -   Click `Create App`.
-    -   Choose OAuth App.
-    -   Copy the development credentials (client ID and client secret).
-    -   Use `https://auth.expo.io/@<your Expo username>/KeepFit` for the redirect URL.
-    -   Make a copy of `keys_defaults.txt` as `src/keys.js` and fill out the Zoom keys with the credentials copied from earlier.
-    -   Run the Expo app.
-
-        ```sh
-        $ expo start
-        ```
-
-    -   The development credentials only allow for the Zoom developer account to sign into the app.
